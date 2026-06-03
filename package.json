@@ -1,0 +1,11 @@
+{
+  "name": "what-did-i-miss",
+  "version": "1.0.0",
+  "description": "AI-powered catch-up brief app for overwhelmed employees returning from time away.",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  }
+}

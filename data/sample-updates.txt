@@ -1,0 +1,22 @@
+[2026-06-01 #account-team] Decision: Acme pilot scope is locked to Data Sync, workflow approvals, and executive reporting. Anything else moves to phase two.
+[2026-06-01 #account-team] Action: you need to review the Acme discovery deck before Thursday morning. Owner: Harrison. Due Thursday 9 AM.
+[2026-06-01 #sales-strategy] Pricing exception for Acme is still missing procurement language. Risk: deal desk says it may slip if not submitted by EOD Wednesday.
+[2026-06-01 Email from Maya] Please confirm whether the Vegas offsite demo should use the customer-safe dataset or the internal synthetic dataset.
+[2026-06-01 #product-launch] Decision: Data Sync v2 launch moved from June 10 to June 14 after QA asked for two more test cycles.
+[2026-06-01 #product-launch] Action: Jordan owns the release note rewrite. Due Friday. You are asked to sanity check customer impact wording.
+[2026-06-01 #engineering] Risk: model evaluation dashboard is missing yesterday's run, so the team cannot compare regression scores yet.
+[2026-06-01 #team-social] FYI: group dinner changed from 7:30 PM to 8:15 PM. Low priority unless you RSVP'd yes.
+[2026-06-02 #customer-success] Globex renewal call moved up to Wednesday. Action: send one slide on adoption blockers before the call.
+[2026-06-02 #customer-success] Decision: Support will lead the first 10 minutes of the Globex call because ticket volume is the customer's main concern.
+[2026-06-02 #security-review] Security review flagged missing data retention language. Risk: approval cannot complete until the owner responds.
+[2026-06-02 Email from Finance] Expense policy reminder only: meal receipts over $75 need itemized detail and attendee names.
+[2026-06-02 #forecast] VP asked for updated commit numbers by EOD Wednesday. Action: you own the notes for the west region variance.
+[2026-06-02 #hackathon] Nice to know: mentors will be available near the registration desk after lunch.
+[2026-06-02 #project-phoenix] Blocker: integration test is failing on the auth handoff step. Owner: Taylor. Need a decision on rollback versus hotfix.
+[2026-06-02 #project-phoenix] Decision: no rollback unless the auth failure reproduces in staging twice.
+[2026-06-03 #account-team] Urgent: Acme CTO asked for a cleaner explanation of why the assistant saves manager time. Please add one concrete before/after example.
+[2026-06-03 #sales-strategy] Decision: discount guardrail stays at 18 percent unless legal approves the procurement clause.
+[2026-06-03 Email from Priya] Can you follow up with Jordan on launch messaging? The exec summary still sounds too technical.
+[2026-06-03 #engineering] Risk: staging deploy is delayed because the build queue is backed up. ETA moved to 3 PM.
+[2026-06-03 #team] Reminder only: upload offsite headshot if you want the team slide updated.
+[2026-06-03 #manager-sync] Action: send your top three blockers and one win for the Friday leadership recap.

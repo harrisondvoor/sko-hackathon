@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>What Did I Miss?</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="topbar" aria-label="Application header">
+        <div>
+          <p class="eyebrow">AI catch-up assistant</p>
+          <h1>What Did I Miss?</h1>
+          <p class="subtitle">Turn days of scattered updates into a prioritized re-entry brief.</p>
+        </div>
+        <div class="topbar-actions">
+          <button class="ghost-button" id="loadDemoButton" type="button">Load demo data</button>
+          <button class="primary-button" id="analyzeTopButton" type="button">Generate brief</button>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="Catch-up workspace">
+        <form class="composer" id="briefForm">
+          <div class="section-heading">
+            <span class="section-number">1</span>
+            <div>
+              <h2>Missed Context</h2>
+              <p>Paste Slack updates, email snippets, ticket notes, meeting notes, or a mixed dump.</p>
+            </div>
+          </div>
+
+          <label class="field">
+            <span>Absence window</span>
+            <input id="absenceWindow" name="absenceWindow" type="text" value="June 1-3, 2026" autocomplete="off">
+          </label>
+
+          <label class="field">
+            <span>Your role</span>
+            <input id="role" name="role" type="text" value="IC / project contributor" autocomplete="off">
+          </label>
+
+          <label class="field">
+            <span>What should the brief optimize for?</span>
+            <select id="focus" name="focus">
+              <option value="urgent work, decisions, owners, and risks">Urgent work, decisions, owners, and risks</option>
+              <option value="customer impact and revenue risks">Customer impact and revenue risks</option>
+              <option value="engineering blockers and launch readiness">Engineering blockers and launch readiness</option>
+              <option value="personal action items and follow-up messages">Personal action items and follow-up messages</option>
+            </select>
+          </label>
+
+          <label class="drop-zone" for="fileInput" id="dropZone">
+            <input id="fileInput" type="file" accept=".txt,.csv,.md,.log">
+            <span class="drop-title">Upload a text file</span>
+            <span class="drop-copy">or paste directly below</span>
+          </label>
+
+          <label class="field">
+            <span>Update dump</span>
+            <textarea id="rawUpdates" name="rawUpdates" rows="16" placeholder="Paste the messy stream here..."></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="primary-button" id="analyzeButton" type="submit">Generate catch-up brief</button>
+            <button class="secondary-button" id="clearButton" type="button">Clear</button>
+          </div>
+        </form>
+
+        <section class="brief-panel" aria-live="polite">
+          <div class="section-heading">
+            <span class="section-number">2</span>
+            <div>
+              <h2>Prioritized Brief</h2>
+              <p id="engineStatus">Load the demo data, then generate a brief.</p>
+            </div>
+          </div>
+
+          <div class="empty-state" id="emptyState">
+            <div class="empty-visual" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <h3>Your first hour back, compressed.</h3>
+            <p>The app separates decisions, owner-based actions, risks, follow-up drafts, and low-value noise.</p>
+          </div>
+
+          <div class="results hidden" id="results">
+            <div class="brief-hero">
+              <div>
+                <p class="eyebrow">Catch-up brief</p>
+                <h3 id="briefTitle"></h3>
+                <p id="summary"></p>
+              </div>
+              <div class="confidence-meter">
+                <span id="confidenceValue">0</span>
+                <small>confidence</small>
+              </div>
+            </div>
+
+            <div class="highlight-grid" id="highlights"></div>
+
+            <div class="tab-list" role="tablist" aria-label="Brief sections">
+              <button class="tab active" type="button" data-tab="actions">Actions</button>
+              <button class="tab" type="button" data-tab="decisions">Decisions</button>
+              <button class="tab" type="button" data-tab="risks">Risks</button>
+              <button class="tab" type="button" data-tab="followups">Follow-ups</button>
+              <button class="tab" type="button" data-tab="signals">Signal map</button>
+              <button class="tab" type="button" data-tab="judge">Judge view</button>
+            </div>
+
+            <div class="tab-panel" id="tabPanel"></div>
+
+            <div class="brief-actions">
+              <button class="secondary-button" id="copyButton" type="button">Copy brief</button>
+              <span id="copyStatus" role="status"></span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <template id="itemTemplate">
+      <article class="result-card">
+        <div class="card-topline">
+          <span class="pill"></span>
+          <span class="source"></span>
+        </div>
+        <h4></h4>
+        <p></p>
+      </article>
+    </template>
+
+    <script src="/app.js" type="module"></script>
+  </body>
+</html>
