@@ -1,7 +1,7 @@
 {
-  "name": "what-did-i-miss",
+  "name": "oracle-mentor-match",
   "version": "1.0.0",
-  "description": "AI-powered catch-up brief app for overwhelmed employees returning from time away.",
+  "description": "Mobile-first Hinge-like mentorship matching demo for Oracle mentors and mentees.",
   "type": "module",
   "private": true,
   "scripts": {
